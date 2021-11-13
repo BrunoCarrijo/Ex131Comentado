@@ -9,7 +9,7 @@ namespace Aula131
     {
         static void Main(string[] args)
         {
-            List<Employee> list = new List<Employee>();
+            List<Employee> list = new List<Employee>();//declaração de lista
 
             Console.Write("Enter the number of employees: ");
             int n = int.Parse(Console.ReadLine());
@@ -25,13 +25,13 @@ namespace Aula131
                 int hours = int.Parse(Console.ReadLine());
                 Console.Write("Value per hour: ");
                 double valuePerHour = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-                if (ch == 'y')
+                if (ch == 'y')//se ch for y, o funcionário é terceirizado e tem dispesa adicional
                 {
                     Console.Write("Additional charge: ");
                     double additionalCharge = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                     list.Add(new OutsourcedEmployee(name, hours, valuePerHour, additionalCharge));
                 }
-                else
+                else// senão, o funcionário é primarizado
                 {
                     list.Add(new Employee(name, hours, valuePerHour));
                 }
